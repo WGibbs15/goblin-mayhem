@@ -1,0 +1,15 @@
+project: wgibbs15/goblin-fuzz
+
+# Target name (should be unique within the project)
+target: goblin-fuzz
+
+image: ghcr.io/wgibbs15/goblin-fuzz:latest
+
+# List of commands used to test the target
+cmds:
+
+    # Command used to start the target, "@@" is the input file
+    # (when "@@" is omitted Mayhem defaults to stdin inputs)
+    - cmd: /parse
+
+    - cmd: /parse_elf
